@@ -24,7 +24,7 @@ NUM_CHANGE_CLASSES = 4
 BATCH_SIZE = 16  # 性能优化：每次送入模型的切片数量
 
 # 🚨 替换为您本地 SECOND_data 文件夹的绝对路径或相对路径
-SECOND_DATA_ROOT = './hnresults'
+SECOND_DATA_ROOT = '结果文件夹'
 # 🚨 替换为您本地保存的权重文件路径
 CD_WEIGHTS_PATH = 'best_cd_finetune_weights.h5'
 
@@ -256,4 +256,5 @@ def predict_and_stitch_full_image(model):
 if __name__ == '__main__':
     loaded_model = load_best_model()
     if loaded_model:
+
         predict_and_stitch_full_image(loaded_model)
