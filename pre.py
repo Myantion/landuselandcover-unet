@@ -6,17 +6,17 @@ import sys
 
 # --- 0. 配置与路径 (请确保路径正确) ---
 
-T1_DAT_PATH = './hn2014/2014.dat'
-T2_DAT_PATH = './hn2018/2018.dat'
+T1_DAT_PATH = '第一时相文件'
+T2_DAT_PATH = '第二时相文件'
 
-OUTPUT_ROOT = './hnresults'
+OUTPUT_ROOT = '结果文件夹'
 OUTPUT_IM1_DIR = os.path.join(OUTPUT_ROOT, 'im1')
 OUTPUT_IM2_DIR = os.path.join(OUTPUT_ROOT, 'im2')
 
 TILE_SIZE = 512
 
 # 关键配置 1: 波段映射
-BAND_MAP_T1 = [4, 3, 2]
+BAND_MAP_T1 = [4, 3, 2]#根据实际情况
 BAND_MAP_T2 = [4, 3, 2]
 
 # 创建输出目录
@@ -125,4 +125,5 @@ if __name__ == '__main__':
     process_and_tile_image(T2_DAT_PATH, OUTPUT_IM2_DIR, BAND_MAP_T2, GLOBAL_MAX_VALUE, TILE_SIZE)
 
     print("\n--- 分块完成 ---")
+
     print("现在您可以运行之前提供的『本地 CPU 预测脚本』了。")
